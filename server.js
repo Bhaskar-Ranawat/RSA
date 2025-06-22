@@ -1,11 +1,17 @@
-const express = require("express");
-const app = express();
-const port = 3333;
+require("dotenv").config();
+
+const app = require("./app");
+
+const { port } = require("./config/config");
+
+const connectDB = require("./DB/mongoDB");
+
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
 app.listen(port, () => {
-  console.log(`The server is up at \n http://localhost:${port}`);
+  console.log(`The server is up at \nhttp://localhost:${port}`);
 });
