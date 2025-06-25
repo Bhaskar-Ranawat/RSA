@@ -1,0 +1,88 @@
+2025-06-25T06:58:23.779Z | INFO | User Logged In
+2025-06-25T06:58:24.002Z | INFO | User JWT created
+2025-06-25T07:00:15.904Z | ERROR | Credentials needed at Login
+2025-06-25T07:01:14.241Z | WARN | User not found
+2025-06-25T07:01:53.506Z | INFO | User created
+2025-06-25T07:01:58.221Z | INFO | User Logged In
+2025-06-25T07:01:58.411Z | INFO | User JWT created
+2025-06-25T07:05:42.960Z | WARN | User already exists {
+  _id: new ObjectId('685b9ee1ce437d6f0433de4e'),
+  firstName: 'Monty',
+  lastName: 'Ahluwalia',
+  email: 'monty@demo.com',
+  password: '$2b$10$hzFo2reFhhE.B5zTal/Tm.XPnh0gWR8WRrkyk0z/.la2epAlNAgaO',
+  phone: 9999988881,
+  location: 'Banglore',
+  isVerified: false,
+  createdAt: 2025-06-25T07:01:53.382Z,
+  updatedAt: 2025-06-25T07:01:53.382Z,
+  __v: 0
+}
+2025-06-25T07:11:01.976Z | INFO | User Logged In
+2025-06-25T07:11:02.106Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T07:12:27.829Z | INFO | User found {
+  _id: new ObjectId('685b9ee1ce437d6f0433de4e'),
+  firstName: 'Monty',
+  lastName: 'Ahluwalia',
+  email: 'monty@demo.com',
+  password: '$2b$10$hzFo2reFhhE.B5zTal/Tm.XPnh0gWR8WRrkyk0z/.la2epAlNAgaO',
+  phone: 9999988881,
+  location: 'Banglore',
+  isVerified: false,
+  createdAt: 2025-06-25T07:01:53.382Z,
+  updatedAt: 2025-06-25T07:01:53.382Z,
+  __v: 0
+}
+2025-06-25T07:12:27.954Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T07:18:45.855Z | INFO | User found {
+  _id: new ObjectId('685b9ee1ce437d6f0433de4e'),
+  firstName: 'Monty',
+  lastName: 'Ahluwalia',
+  email: 'monty@demo.com',
+  password: '$2b$10$hzFo2reFhhE.B5zTal/Tm.XPnh0gWR8WRrkyk0z/.la2epAlNAgaO',
+  phone: 9999988881,    
+  location: 'Banglore',
+  isVerified: false,
+  createdAt: 2025-06-25T07:01:53.382Z,
+  updatedAt: 2025-06-25T07:01:53.382Z,
+  __v: 0
+}
+2025-06-25T07:18:45.987Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T07:19:31.181Z | INFO | User found Monty Ahluwalia
+2025-06-25T07:19:31.308Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T07:19:45.320Z | INFO | User found "Monty Ahluwalia"
+2025-06-25T07:19:45.456Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T08:46:08.452Z | INFO | User found "Monty Ahluwalia"
+2025-06-25T08:46:08.753Z | INFO | User LoggedIn, JWT created and attached
+2025-06-25T08:46:19.398Z | WARN | User already exists {
+  _id: new ObjectId('685b9ee1ce437d6f0433de4e'),
+  firstName: 'Monty',
+  lastName: 'Ahluwalia',
+  email: 'monty@demo.com',
+  phone: 9999988881,
+  location: 'Banglore',
+  isVerified: false,
+  createdAt: 2025-06-25T07:01:53.382Z,
+  updatedAt: 2025-06-25T07:01:53.382Z,
+  __v: 0
+}
+2025-06-25T08:46:22.631Z | WARN | User already exists {
+  _id: new ObjectId('685b9ee1ce437d6f0433de4e'),
+  firstName: 'Monty',
+  lastName: 'Ahluwalia',
+  email: 'monty@demo.com',
+  phone: 9999988881,
+  location: 'Banglore',
+  isVerified: false,
+  createdAt: 2025-06-25T07:01:53.382Z,
+  updatedAt: 2025-06-25T07:01:53.382Z,
+  __v: 0
+}
+2025-06-25T09:10:17.759Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:11:26.145Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:17:59.693Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:18:16.720Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T10:06:17.173Z | ERROR | Error in adminSeeder file: Operation `admins.insertOne()` buffering timed out after 10000ms
+2025-06-25T10:11:09.144Z | INFO | Admin created by adminSeeder file Super Admin
+2025-06-25T10:17:14.902Z | ERROR | Error in adminSeeder file: E11000 duplicate key error collection: RSA.admins index: email_1 dup key: { email: "admin@example.com" }
+2025-06-25T10:17:28.042Z | INFO | Admin created by adminSeeder file Super Admin

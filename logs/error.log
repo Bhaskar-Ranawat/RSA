@@ -1,0 +1,7 @@
+2025-06-25T07:00:15.904Z | ERROR | Credentials needed at Login
+2025-06-25T09:10:17.759Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:11:26.145Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:17:59.693Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T09:18:16.720Z | ERROR | Error in adminSeeder file: Illegal arguments: undefined, number
+2025-06-25T10:06:17.173Z | ERROR | Error in adminSeeder file: Operation `admins.insertOne()` buffering timed out after 10000ms
+2025-06-25T10:17:14.902Z | ERROR | Error in adminSeeder file: E11000 duplicate key error collection: RSA.admins index: email_1 dup key: { email: "admin@example.com" }

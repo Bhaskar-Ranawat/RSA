@@ -9,12 +9,12 @@ const validatorMiddleware = require("../../middleware/user/validatorMiddleware")
 const userSchemaValidation = require("../../validation/user/ValidatorJoi");
 
 router.post(
-  "/user-registration",
+  "/signup",
   validatorMiddleware(userSchemaValidation),
   userRegistration
 );
 
-router.post("/user-verification", userVerification);
+router.post("/login", userVerification);
 
 module.exports = router;
 

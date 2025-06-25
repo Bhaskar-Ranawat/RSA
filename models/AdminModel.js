@@ -1,50 +1,40 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const userSchema = mongoose.Schema(
+
+const adminSchema = mongoose.Schema(
   {
-    firstName: {
+    name: {
       type: String,
       required: true,
-      trim: true,
-    },
-    lastName: {
-      type: String,
-      trime: true,
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      lowercase: true,
       trim: true,
+      lowercase: true,
     },
     password: {
       type: String,
       required: true,
       select: false,
+      trim: true,
     },
-    phone: {
-      type: Number,
-      required: true,
-      unique: true,
-    },
-    location: {
+    role: {
       type: String,
-    },
-    isVerified: {
-      type: Boolean,
-      default: false,
+      enum: ["admin"],
+      default: "admin",
     },
   },
   { timestamps: true }
 );
 
-userSchema.pre("save", async function (next) {
+adminSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
   this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
-const UserModel = mongoose.model("User", userSchema);
+const AdminModel = mongoose.model("Admin", adminSchema);
 
-module.exports = UserModel;
+module.exports = AdminModel;
