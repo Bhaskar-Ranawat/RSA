@@ -14,6 +14,17 @@ module.exports = function setupLifecycle({ dbConnection, server, logger }) {
         logger?.info(`MongoDB connection closed`);
         console.log("MongoDB connection closed");
       }
+
+      //This is an issue that is needed to be resolved
+      //all my logs are not loggin as the process.exit is executed before everything is registered
+      // need to improve this logic, but it is complicated so move on to other tasks
+      // await new Promise((resolve) => {
+      //   for (const transport of logger.transports) {
+      //     transport.once("finish", resolve);
+      //     transport.end();
+      //   }
+      // });
+
       process.exit(0);
     } catch (error) {
       try {

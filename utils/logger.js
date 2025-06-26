@@ -3,7 +3,10 @@ const { createLogger, transports, format } = require("winston");
 const logger = createLogger({
   level: "info",
   format: format.combine(
-    format.timestamp(),
+    format.timestamp({
+      format: () =>
+        new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+    }),
     format.printf(({ level, message, timestamp }) => {
       return `${timestamp} | ${level.toUpperCase()} | ${message}`;
     })
