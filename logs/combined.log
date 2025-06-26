@@ -86,3 +86,20 @@
 2025-06-25T10:11:09.144Z | INFO | Admin created by adminSeeder file Super Admin
 2025-06-25T10:17:14.902Z | ERROR | Error in adminSeeder file: E11000 duplicate key error collection: RSA.admins index: email_1 dup key: { email: "admin@example.com" }
 2025-06-25T10:17:28.042Z | INFO | Admin created by adminSeeder file Super Admin
+2025-06-25T18:54:13.291Z | ERROR | mongoDB --> Error: Cannot read properties of undefined (reading 'log') || TypeError: Cannot read properties of undefined (reading 'log')
+2025-06-25T18:54:24.912Z | ERROR | mongoDB --> Error: Cannot assign to read only property 'plugins' of object '#<Mongoose>' || TypeError: Cannot assign to read only property 'plugins' of object '#<Mongoose>'
+2025-06-25T18:55:08.956Z | ERROR | mongoDB --> Error: Cannot assign to read only property 'plugins' of object '#<Mongoose>' || TypeError: Cannot assign to read only property 'plugins' of object '#<Mongoose>'
+2025-06-26T06:46:37.686Z | ERROR | Unhandled Rejection Encountered: TypeError: logger?.infor is not a function
+2025-06-26T06:48:00.549Z | ERROR | Unhandled Rejection Encountered: TypeError: logger?.infor is not a function
+2025-06-26T06:53:31.431Z | INFO | MongoDB connected successfully
+2025-06-26T06:53:38.119Z | INFO | Shutting down due to : SIGINT
+2025-06-26T06:56:07.157Z | INFO | MongoDB connected successfully
+2025-06-26T06:56:08.585Z | INFO | Shutting down due to : SIGINT
+2025-06-26T06:57:21.034Z | INFO | MongoDB connected successfully
+2025-06-26T06:57:22.720Z | INFO | Shutting down due to : SIGINT
+2025-06-26T06:59:10.960Z | INFO | MongoDB connected successfully
+2025-06-26T06:59:12.022Z | INFO | Shutting down due to : SIGINT
+2025-06-26T06:59:22.831Z | INFO | MongoDB connected successfully
+2025-06-26T06:59:24.048Z | INFO | Shutting down due to : SIGINT
+2025-06-26T07:01:31.043Z | INFO | MongoDB connected successfully
+2025-06-26T07:01:33.220Z | INFO | Shutting down due to : SIGINT

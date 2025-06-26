@@ -28,27 +28,13 @@ const connectDB = async () => {
     await mongoose.connect(`${mongo}/RSA`, {
       serverSelectionTimeoutMS: 5000, //retry quickly if DB not reachable
     });
+    logger.info(`MongoDB connected successfully`);
     console.log(`MongoDB connected successfully`);
+    return mongoose.connection;
+    // console.dir(`MongoDB connected successfully`); --> green color like nodemon
   } catch (error) {
     handleError(error);
   }
 };
-
-//Graceful Shutdown
-const gracefulExit = async (signal) => {
-  logger.info(`Recieved ${signal}. Closing MongoDB connection.....`);
-  console.log(`Recieved ${signal}. Closing MongoDB connection.....`);
-  try {
-    await db.close();
-    console.log("MongoDB connection closed gracefully");
-    logger.info("MongoDB connection closed gracefully");
-    process.exit(0);
-  } catch (err) {
-    handleError(err, "gracefulExit MongoDB connection");
-  }
-};
-
-process.on("SIGINT", async () => await gracefulExit("SIGINT"));
-process.on("SIGTERM", async () => await gracefulExit("SIGTERM"));
 
 module.exports = connectDB;
