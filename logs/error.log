@@ -13,3 +13,35 @@
 2025-06-26T06:53:38.129Z | ERROR | Error during shutdown: logger is not defined
 2025-06-26T06:56:08.595Z | ERROR | Error during shutdown: logger is not defined
 2025-06-26T06:57:22.729Z | ERROR | Error during shutdown: logger is not defined
+28/6/2025, 12:11:32 am | ERROR | Internal server error from userRegistration
+28/6/2025, 12:16:17 am | ERROR | Internal server error from userRegistration
+28/6/2025, 12:32:49 am | ERROR | Credentials needed at Login
+28/6/2025, 3:11:20 pm | ERROR | Error in user Verification/Login
+28/6/2025, 3:12:28 pm | ERROR | Error in user Verification/Login
+29/6/2025, 12:05:49 am | ERROR | User already exists: {
+  profileCompleted: false,
+  _id: new ObjectId('686035a7dd909046297d9294'),
+  credentials: { email: 'vineet@demo.com', phone: 9818166899 },
+  brandName: 'Kapoor Automobiles',
+  vendorName: 'Vineet Kapoor',
+  typeOfService: [],
+  typeOfVehicle: [],
+  businessImages: [],
+  averageRating: 0,
+  customersServed: [],
+  currentCustomer: null,
+  ratings: [],
+  createdAt: 2025-06-28T18:34:15.138Z,
+  updatedAt: 2025-06-28T18:34:15.138Z,
+  __v: 0
+} 
+29/6/2025, 12:25:09 am | ERROR | Provider Credentials do not match at Login
+29/6/2025, 12:25:17 am | ERROR | No Provider with matching credentials found
+29/6/2025, 12:26:39 am | ERROR | No Provider with matching credentials found
+29/6/2025, 12:26:48 am | ERROR | No Provider with matching credentials found
+29/6/2025, 12:26:52 am | ERROR | No Provider with matching credentials found
+29/6/2025, 12:28:01 am | ERROR | No Provider with matching email found: vineet@deo.com
+29/6/2025, 12:28:22 am | ERROR | No Provider with matching email found: vineet@deo.com
+29/6/2025, 12:28:44 am | ERROR | Provider credentials needed at Login
+29/6/2025, 12:29:46 am | ERROR | Provider credentials needed at Login
+29/6/2025, 12:31:29 am | ERROR | Error in Provider Verification/Login

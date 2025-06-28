@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
+const credentialSchema = require("./globalAuthModel");
 const userSchema = mongoose.Schema(
   {
     firstName: {
@@ -11,23 +12,7 @@ const userSchema = mongoose.Schema(
       type: String,
       trime: true,
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true,
-    },
-    password: {
-      type: String,
-      required: true,
-      select: false,
-    },
-    phone: {
-      type: Number,
-      required: true,
-      unique: true,
-    },
+    credentials: credentialSchema,
     location: {
       type: String,
     },
@@ -40,11 +25,29 @@ const userSchema = mongoose.Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, 10);
+  if (!this.isModified("credentials.password")) return next();
+  this.credentials.password = await bcrypt.hash(this.credentials.password, 10);
   next();
 });
 
 const UserModel = mongoose.model("User", userSchema);
 
 module.exports = UserModel;
+
+// email: {
+//       type: String,
+//       required: true,
+//       unique: true,
+//       lowercase: true,
+//       trim: true,
+//     },
+//     password: {
+//       type: String,
+//       required: true,
+//       select: false,
+//     },
+//     phone: {
+//       type: Number,
+//       required: true,
+//       unique: true,
+//     }

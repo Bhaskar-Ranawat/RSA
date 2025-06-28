@@ -6,7 +6,7 @@ const {
 } = require("../../controller/UserController/userRegistration");
 
 const validatorMiddleware = require("../../middleware/user/validatorMiddleware");
-const userSchemaValidation = require("../../validation/user/ValidatorJoi");
+const userSchemaValidation = require("../../validation/user/UserValidatorJoi");
 
 router.post(
   "/signup",

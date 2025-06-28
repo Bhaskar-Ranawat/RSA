@@ -1,23 +1,22 @@
 require("dotenv").config();
-
 const app = require("./app");
-
 const { port } = require("./config/config");
-
 const connectDB = require("./DB/mongoDB");
-
 const logger = require("./utils/logger");
 const setupLifecycle = require("./utils/lifecycleManager");
 
 let dbConnection;
 let server;
 
+const userRoutes = require("./routes/UserRoutes/userAuthRoutes");
+app.use("/api/user", userRoutes);
+
+const providerRoutes = require("./routes/ProviderRoutes/providerAuthRoutes");
+app.use("/api/provider", providerRoutes);
+
 app.get("/", (req, res) => {
   res.send("Hello world!");
 });
-
-const userRoutes = require("./routes/UserRoutes/userRoutes");
-app.use("/api/user", userRoutes);
 
 (async () => {
   try {

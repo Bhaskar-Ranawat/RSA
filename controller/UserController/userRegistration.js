@@ -1,14 +1,17 @@
 const UserModel = require("../../models/UserModel");
 const bcrypt = require("bcryptjs");
 const logger = require("../../utils/logger");
-
+const jwtSecret = require("../../config/config");
 const jwt = require("jsonwebtoken");
 
 const userRegistration = async (req, res) => {
-  const { email, phone } = req.body;
+  const {
+    credentials: { email, phone },
+  } = req.body;
+
   try {
     const existingUser = await UserModel.findOne({
-      $or: [{ email }, { phone }],
+      $or: [{ "credntials.email": email }, { "credentials.phone": phone }],
     });
 
     if (existingUser) {
@@ -32,13 +35,17 @@ const userRegistration = async (req, res) => {
 };
 
 const userVerification = async (req, res) => {
-  const { email, password } = req.body;
+  const {
+    credentials: { email, password },
+  } = req.body;
   if (!email || !password) {
-    logger.error("Credentials needed at Login");
+    logger.error("User Credentials needed at Login");
     return res.status(400).json({ message: "Missing credentials at Login" });
   }
   try {
-    const user = await UserModel.findOne({ email }).select("+password");
+    const user = await UserModel.findOne({ "credentials.email": email }).select(
+      "+credentials.password"
+    );
     if (!user) {
       logger.warn("User not found");
       return res
@@ -46,13 +53,12 @@ const userVerification = async (req, res) => {
         .json({ message: "Invalid credentials, User not found" });
     }
     logger.info(`User found "${user.firstName} ${user.lastName}"`);
-    console.log(user);
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user.credentials.password);
     if (!isMatch) {
-      logger.warn("Unauthorized request for login");
+      logger.warn("Unauthorized User request for login");
       return res.status(401).json({ message: "Unauthorized request" });
     }
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, jwtSecret, {
       expiresIn: "1h",
     });
     logger.info("User LoggedIn, JWT created and attached");
@@ -77,11 +83,10 @@ module.exports = {
 // need to work on form validation, make middleware to cater these things first
 // try to include a logger winston/pino/morgan
 
-// Both tasks done 
-
+// Both tasks done
 
 // completed tasks, need to enhance this with forgot password change routes and
 // update user profile routes
 
-// start working on how a user can register their assistance needs, make a schema for that
+// start working on how a user can register their assistance needs (Requests for help), make a schema for that
 // when come back, read this and start wokring from here

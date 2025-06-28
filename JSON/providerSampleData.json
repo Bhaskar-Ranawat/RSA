@@ -1,0 +1,47 @@
+{
+  "brandName": "FastFix AutoCare",
+  "vendorName": "Rakesh Sharma",
+  "typeOfService": ["Towing", "Battery Jump Start", "Tyre Change"],
+  "typeOfVehicle": ["Car", "Bike"],
+  "operatingTime": {
+    "from": "08:00",
+    "to": "20:00"
+  },
+  "profileImage": "https://example.com/images/providers/profile1.jpg",
+  "businessImages": [
+    "https://example.com/images/providers/business1.jpg",
+    "https://example.com/images/providers/business2.jpg"
+  ],
+  "ratings": [
+    {
+      "userId": "6650fc42a12e8d4b9876cdef",
+      "rating": 5,
+      "feedback": "Quick and reliable service!"
+    },
+    {
+      "userId": "6650fc42a12e8d4b9876abcd",
+      "rating": 4,
+      "feedback": "Good experience overall."
+    }
+  ],
+  "averageRating": 4.5,
+  "customersServed": [
+    "6650fc42a12e8d4b9876cdef",
+    "6650fc42a12e8d4b9876abcd"
+  ],
+  "currentCustomer": "6650fc42a12e8d4b9876beef",
+  "location": {
+    "shopName": "FastFix Garage",
+    "streetAddress": "12 Main Road",
+    "area": "Rajouri Garden",
+    "district": "West Delhi",
+    "state": "Delhi",
+    "country": "India",
+    "pincode": "110027",
+    "plusCode": "7JWV+3F New Delhi, Delhi",
+    "coordinates": {
+      "latitude": 28.642098,
+      "longitude": 77.123456
+    }
+  }
+}
