@@ -3,9 +3,9 @@ const router = express.Router();
 const {
   userRegistration,
   userVerification,
-} = require("../../controller/UserController/userRegistration");
+} = require("../../controller/UserController/userAuth");
 
-const validatorMiddleware = require("../../middleware/user/validatorMiddleware");
+const validatorMiddleware = require("../../middleware/globalMiddlewares/joiValidatorMiddleware");
 const userSchemaValidation = require("../../validation/user/UserValidatorJoi");
 
 router.post(

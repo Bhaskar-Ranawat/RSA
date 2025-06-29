@@ -45,3 +45,54 @@
 29/6/2025, 12:28:44 am | ERROR | Provider credentials needed at Login
 29/6/2025, 12:29:46 am | ERROR | Provider credentials needed at Login
 29/6/2025, 12:31:29 am | ERROR | Error in Provider Verification/Login
+29/6/2025, 2:10:02 pm | ERROR | User already exists: {
+  _id: new ObjectId('6860f96b123a837840efef4c'),
+  credentials: { email: 'sallu@miyan.com', phone: 1231231212 },
+  brandName: 'Khan tyres',
+  vendorName: 'Sallu khan',
+  typeOfService: [],
+  typeOfVehicle: [],
+  businessImages: [],
+  averageRating: 0,
+  customersServed: [],
+  currentCustomer: null,
+  profileCompleted: false,
+  ratings: [],
+  createdAt: 2025-06-29T08:29:31.434Z,
+  updatedAt: 2025-06-29T08:29:31.434Z,
+  __v: 0
+} 
+29/6/2025, 2:21:49 pm | ERROR | User already exists: {
+  _id: new ObjectId('6860fe9f88498c33d8b54e26'),
+  credentials: { email: 'sallu@miyan.com', phone: 1231231212 },
+  brandName: 'Khan tyres',
+  vendorName: 'Sallu khan',
+  typeOfService: [],
+  typeOfVehicle: [],
+  businessImages: [],
+  averageRating: 0,
+  customersServed: [],
+  currentCustomer: null,
+  profileCompleted: false,
+  ratings: [],
+  createdAt: 2025-06-29T08:51:43.863Z,
+  updatedAt: 2025-06-29T08:51:43.863Z,
+  __v: 0
+} 
+29/6/2025, 2:21:56 pm | ERROR | User already exists: {
+  _id: new ObjectId('6860fe9f88498c33d8b54e26'),
+  credentials: { email: 'sallu@miyan.com', phone: 1231231212 },
+  brandName: 'Khan tyres',
+  vendorName: 'Sallu khan',
+  typeOfService: [],
+  typeOfVehicle: [],
+  businessImages: [],
+  averageRating: 0,
+  customersServed: [],
+  currentCustomer: null,
+  profileCompleted: false,
+  ratings: [],
+  createdAt: 2025-06-29T08:51:43.863Z,
+  updatedAt: 2025-06-29T08:51:43.863Z,
+  __v: 0
+} 
